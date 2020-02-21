@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+	<title></title>
+	<style type="text/css">
+
+		@keyframes bug{
+  0%{left: 10%; top: 15%;}
+  50%{left: 75%; top: 20%;}
+  100%{left: 10%; top: 15%;}
+  }
+  @keyframes bug2{
+    0%{left: 80%; top: 5%;}
+    50%{left: 35%; top: 70%;}
+    100%{left: 80%; top: 5%;}
+    }
+    @keyframes bug3{
+      0%{left: 15%; top: 95%;}
+      50%{left: 50%; top: 48%;}
+      100%{left: 15%; top: 95%;}
+      }
+      @keyframes bug4{
+        0%{left: 83%; top: 68%;}
+        50%{left: 75%; top: 42%;}
+        100%{left: 83%; top: 68%;}
+        }
+    @keyframes glow {
+      0% {background-color: rgba(136,106,55,0.05);}
+      50% {background-color: rgba(223,185,69,0.85);}
+      100% {background-color: rgba(136,106,55,0.05);}
+
+
+    }
+
+.star{
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: rgba(136,106,55,0.05);
+  border-radius: 50%;
+  filter: blur(3px);
+  animation-iteration-count: infinite,infinite;
+  animation-timing-function: ease-in-out,ease-in-out;
+
+}
+.star:hover {
+  cursor: grabbing;
+  animation-play-state: paused, running;
+
+}
+
+body .star:nth-child(1) {
+  animation-name: bug, glow;
+  animation-duration: 10s, 4s;
+  animation-delay: 0s, 3s;
+  left: 10%;
+  top: 15%;
+
+}
+body .star:nth-child(2) {
+  animation-name: bug2, glow;
+  animation-duration: 15s, 4s;
+  animation-delay: 0s,8s;
+  left: 80%;
+  top: 5%;
+}
+body .star:nth-child(3) {
+    animation-name: bug3, glow;
+    animation-duration: 13s, 4s;
+    animation-delay: 0s, 10s;
+    left: 15%;
+    top: 95%;
+}
+body .star:nth-child(4) {
+    animation-name: bug4, glow;
+    animation-duration: 5s, 1.4s;
+    animation-delay: 0s, 18s;
+    left: 83%;
+    top: 68%;
+}
+
+		
+		.background{
+			background-image: url("364649.jpg");
+			width:100vw;
+			height:100vh;
+			position:absolute;
+
+		}
+
+
+		div {
+  			width: 100vw;
+  			height: 100vh;
+  			background-color:white;
+  			position: relative;
+  			animation-name: example;
+  			animation-duration: 4s;
+  			animation-iteration-count: infinite;
+  		}
+
+@keyframes example {
+  0%   {background-color:rgba(0,0,0,0.1);}
+  25%  {background-color:rgba(0,0,0,0.3);}
+  50%  {background-color:rgba(0,0,0,0.5);}
+  75%  {background-color:rgba(0,0,0,0.7);}
+  100% {background-color:rgba(0,0,0,0.9);}
+}
+
+
+	</style>
+
+</head>
+<body>
+	<div class="background"></div>
+	 <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+
+	
+
+</body>
+</html>
